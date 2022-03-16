@@ -13,6 +13,7 @@ import 'package:helloflutter/08_%E5%AE%B9%E5%99%A8%E7%B1%BB%E7%BB%84%E4%BB%B6/f0
 import 'package:helloflutter/10_%E5%AE%B9%E5%99%A8%E7%B1%BB%E7%BB%84%E4%BB%B6Scaffold/f03_scaffold02.dart';
 import 'package:helloflutter/11_%E5%8F%AF%E6%BB%9A%E5%8A%A8%E7%BB%84%E4%BB%B6/f03_infinite_list_view.dart';
 import 'package:helloflutter/11_%E5%8F%AF%E6%BB%9A%E5%8A%A8%E7%BB%84%E4%BB%B6/f05_scroll_notification.dart';
+import 'package:helloflutter/11_%E5%8F%AF%E6%BB%9A%E5%8A%A8%E7%BB%84%E4%BB%B6/f11_keep_alive03.dart';
 
 import '01_dart组件/f04_counter.dart';
 import '02_StatelessWidget生命周期/f01_stateless_first.dart';
@@ -41,6 +42,20 @@ import '10_容器类组件Scaffold/f01_scaffold.dart';
 import '11_可滚动组件/f01_single_child_scroll_view.dart';
 import '11_可滚动组件/f02_list_view01.dart';
 import '11_可滚动组件/f04_scroll_controller.dart';
+import '11_可滚动组件/f06_animated_list.dart';
+import '11_可滚动组件/f07_grid_view.dart';
+import '11_可滚动组件/f08_page_view.dart';
+import '11_可滚动组件/f09_keep_alive.dart';
+import '11_可滚动组件/f10_keep_alive02.dart';
+import '11_可滚动组件/f12_tab_bar_view01.dart';
+import '11_可滚动组件/f13_tab_bar_view02.dart';
+import '11_可滚动组件/f14_custom_scroll_view.dart';
+import '11_可滚动组件/f15_persistent_header.dart';
+import '11_可滚动组件/f16_sliver_flexible_header.dart';
+import '11_可滚动组件/f17_sliver_persistent_header_to_box.dart';
+import '11_可滚动组件/f18_snap_app_bar.dart';
+import '11_可滚动组件/f19_snap_app_bar2.dart';
+import '11_可滚动组件/f20_nested_tab_bar_view.dart';
 
 void main() => runApp(const MyApp());
 
@@ -63,7 +78,7 @@ class MyApp extends StatelessWidget {
       //       text: ModalRoute.of(context)!.settings.arguments as String),
       //   'echo_page': (context) => const EchoRoute()
       // },
-      home: const ScrollNotificationTest(),
+      home: const NestedTabBarViewTest(),
     );
   }
 }
