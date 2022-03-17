@@ -1,8 +1,8 @@
-/// 
+///
 /// Author       : zhongaidong
 /// Date         : 2022-03-14 17:21:31
-/// Description  : 
-/// 
+/// Description  : 嵌套可滚动组件
+///
 
 import 'package:flutter/material.dart';
 
@@ -20,7 +20,8 @@ class NestedTabBarViewTest extends StatelessWidget {
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return [
               SliverOverlapAbsorber(
-                handle: NestedScrollView.sliverOverlapAbsorberHandleFor(context),
+                handle:
+                    NestedScrollView.sliverOverlapAbsorberHandleFor(context),
                 sliver: SliverAppBar(
                   title: const Text('商城'),
                   floating: true,
@@ -41,7 +42,8 @@ class NestedTabBarViewTest extends StatelessWidget {
                     key: PageStorageKey<String>(name),
                     slivers: [
                       SliverOverlapInjector(
-                        handle: NestedScrollView.sliverOverlapAbsorberHandleFor(context),
+                        handle: NestedScrollView.sliverOverlapAbsorberHandleFor(
+                            context),
                       ),
                       SliverPadding(
                         padding: const EdgeInsets.all(8.0),
