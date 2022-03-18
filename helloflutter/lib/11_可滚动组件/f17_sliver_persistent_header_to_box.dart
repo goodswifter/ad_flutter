@@ -1,7 +1,7 @@
 ///
 /// Author       : zhongaidong
 /// Date         : 2022-03-14 17:01:06
-/// Description  :
+/// Description  : 永久固定header
 ///
 
 import 'package:flutter/material.dart';
