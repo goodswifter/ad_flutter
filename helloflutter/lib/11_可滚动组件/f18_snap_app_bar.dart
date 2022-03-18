@@ -1,7 +1,7 @@
 ///
 /// Author       : zhongaidong
 /// Date         : 2022-03-14 17:15:56
-/// Description  :
+/// Description  : 隐藏AppBar
 ///
 
 import 'package:flutter/material.dart';
