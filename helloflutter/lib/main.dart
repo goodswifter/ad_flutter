@@ -56,6 +56,7 @@ import '11_可滚动组件/f17_sliver_persistent_header_to_box.dart';
 import '11_可滚动组件/f18_snap_app_bar.dart';
 import '11_可滚动组件/f19_snap_app_bar2.dart';
 import '11_可滚动组件/f20_nested_tab_bar_view.dart';
+import '12_功能性组件/f12_functional_widget_header.dart';
 
 void main() => runApp(const MyApp());
 
@@ -78,7 +79,7 @@ class MyApp extends StatelessWidget {
       //       text: ModalRoute.of(context)!.settings.arguments as String),
       //   'echo_page': (context) => const EchoRoute()
       // },
-      home: const NestedTabBarViewTest(),
+      home: const DialogAllTest(),
     );
   }
 }
