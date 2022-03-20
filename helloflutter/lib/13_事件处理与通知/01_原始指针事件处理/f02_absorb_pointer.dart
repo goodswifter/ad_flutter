@@ -24,6 +24,10 @@ class AbsorbPointerTest extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text('AbsorbPointer'),
+            ),
             Listener(
               child: AbsorbPointer(
                 child: Listener(
@@ -38,6 +42,10 @@ class AbsorbPointerTest extends StatelessWidget {
               onPointerDown: (event) => print("AbsorbPointer - up"),
             ),
             const SizedBox(height: 20),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text('IgnorePointer'),
+            ),
             Listener(
               child: IgnorePointer(
                 child: Listener(

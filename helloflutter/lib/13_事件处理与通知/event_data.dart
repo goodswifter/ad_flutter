@@ -4,7 +4,8 @@
 /// Description  :
 ///
 
-import 'package:flutter/material.dart';
+import 'package:helloflutter/13_%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E4%B8%8E%E9%80%9A%E7%9F%A5/06_%E9%80%9A%E7%9F%A5(Notification)/f02_custom_notification.dart';
+import 'package:helloflutter/13_%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E4%B8%8E%E9%80%9A%E7%9F%A5/06_%E9%80%9A%E7%9F%A5(Notification)/f03_stop_bubble_notification.dart';
 
 import '01_原始指针事件处理/f01_listener.dart';
 import '01_原始指针事件处理/f02_absorb_pointer.dart';
@@ -21,92 +22,107 @@ import '04_手势原理与手势冲突/f02_drag_gesture_contend.dart';
 import '04_手势原理与手势冲突/f03_gesture_conflict.dart';
 import '04_手势原理与手势冲突/f04_gesture_conflict02.dart';
 import '04_手势原理与手势冲突/f05_custom_gesture_recognizer.dart';
+import '06_通知(Notification)/f01_list_view_notifcation.dart';
 
 class EventData {
-  static final List<String> _groupTitles = [
-    
-    '05 事件总线',
-    '06 通知 Notification',
-  ];
-
-  static final List<Map> eventMap = [
+  static final List<Map<String, dynamic>> eventMap = [
     {
-      'title': '01 原始指针事件处理',
-      'chilren': const [
+      'groupTitle': '01 原始指针事件处理',
+      'children': const [
         {
-          'title': '原始事件',
-          'page': ListenerTest(),
+          'itemTitle': '原始事件',
+          'jumpPage': ListenerTest(),
         },
         {
-          'title': '忽略事件',
-          'page': AbsorbPointerTest(),
+          'itemTitle': '忽略事件',
+          'jumpPage': AbsorbPointerTest(),
         },
       ],
     },
     {
-      'title': '02 手势识别',
-      'chilren': const [
+      'groupTitle': '02 手势识别',
+      'children': const [
         {
-          'title': '点击、双击、长按',
-          'page': GestureDetectorTest(),
+          'itemTitle': '点击、双击、长按',
+          'jumpPage': GestureDetectorTest(),
         },
         {
-          'title': '拖动(任意方向)',
-          'page': DragRandomDirectionTest(),
+          'itemTitle': '拖动(任意方向)',
+          'jumpPage': DragRandomDirectionTest(),
         },
         {
-          'title': '拖动(单一方向)',
-          'page': DragSingleDirectionTest(),
+          'itemTitle': '拖动(单一方向)',
+          'jumpPage': DragSingleDirectionTest(),
         },
         {
-          'title': '缩放',
-          'page': ScaleTest(),
+          'itemTitle': '缩放',
+          'jumpPage': ScaleTest(),
         },
         {
-          'title': '手势识别',
-          'page': GestureRecognizerTest(),
-        },
-      ],
-    },
-    {
-      'title': '03 Flutter事件机制',
-      'chilren': const [
-        {
-          'title': '水印',
-          'page': WatermarkTest(),
-        },
-        {
-          'title': 'Stack Hit Test',
-          'page': StackEventTest(),
-        },
-        {
-          'title': '手势 Hit Test',
-          'page': GestureHitTestBlockerTest(),
+          'itemTitle': '手势识别',
+          'jumpPage': GestureRecognizerTest(),
         },
       ],
     },
     {
-      'title': '04 手势原理与手势冲突',
-      'chilren': const [
+      'groupTitle': '03 Flutter事件机制',
+      'children': const [
         {
-          'title': '手势竞争',
-          'page': GestureDetectorContend(),
+          'itemTitle': '水印',
+          'jumpPage': WatermarkTest(),
         },
         {
-          'title': '拖动手势竞争',
-          'page': DragGestureContend(),
+          'itemTitle': 'Stack Hit Test',
+          'jumpPage': StackEventTest(),
         },
         {
-          'title': '多手势冲突',
-          'page': GestureConflictTest(),
+          'itemTitle': '手势 Hit Test',
+          'jumpPage': GestureHitTestBlockerTest(),
+        },
+      ],
+    },
+    {
+      'groupTitle': '04 手势原理与手势冲突',
+      'children': const [
+        {
+          'itemTitle': '手势竞争',
+          'jumpPage': GestureDetectorContend(),
         },
         {
-          'title': '多手势冲突解决',
-          'page': GestureConflictTest02(),
+          'itemTitle': '拖动手势竞争',
+          'jumpPage': DragGestureContend(),
         },
         {
-          'title': '自定义识别器解决冲突',
-          'page': CustomGestureRecognizerTest(),
+          'itemTitle': '多手势冲突',
+          'jumpPage': GestureConflictTest(),
+        },
+        {
+          'itemTitle': '多手势冲突解决',
+          'jumpPage': GestureConflictTest02(),
+        },
+        {
+          'itemTitle': '自定义识别器解决冲突',
+          'jumpPage': CustomGestureRecognizerTest(),
+        },
+      ],
+    },
+    {
+      'groupTitle': '05 事件总线',
+    },
+    {
+      'groupTitle': '06 通知 Notification',
+      'children': const [
+        {
+          'itemTitle': '可滚动组件滚动通知',
+          'jumpPage': ListViewNotification(),
+        },
+        {
+          'itemTitle': '自定义通知',
+          'jumpPage': CustomNotificationTest(),
+        },
+        {
+          'itemTitle': '阻止冒泡通知',
+          'jumpPage': StopBubbleNotificationTest(),
         },
       ],
     },

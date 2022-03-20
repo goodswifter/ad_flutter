@@ -59,16 +59,18 @@ class Header extends StatelessWidget {
     this.index,
     this.title,
     this.color = Colors.lightBlue,
+    this.height = 40,
   }) : super(key: key);
 
   final String? title;
   final int? index;
   final Color color;
+  final double height;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 60,
+      height: height,
       color: color,
       padding: const EdgeInsets.symmetric(horizontal: 16.0),
       alignment: Alignment.centerLeft,

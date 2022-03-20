@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_sticky_header/flutter_sticky_header.dart';
 
 import 'common.dart';
+import 'event_model.dart';
 
 class StickyHeaderGrid extends StatelessWidget {
   const StickyHeaderGrid(
@@ -15,7 +16,7 @@ class StickyHeaderGrid extends StatelessWidget {
       : super(key: key);
 
   final String groupTitle;
-  final List<Map<String, Object>> children;
+  final List<EventItem> children;
 
   @override
   Widget build(BuildContext context) {
@@ -27,12 +28,13 @@ class StickyHeaderGrid extends StatelessWidget {
           crossAxisSpacing: 4.0,
           mainAxisSpacing: 4.0,
           childAspectRatio: 4,
+          mainAxisExtent: 50,
         ),
-        delegate: SliverChildBuilderDelegate(((context, index) => Container())),
-        // delegate: SliverChildBuilderDelegate(
-        //   (context, i) =>
-        //       jumpButton(context, children[i], children[i]),
-        //   childCount: children.length,
+        delegate: SliverChildBuilderDelegate(
+          (context, i) => jumpButton(
+              context, children[i].jumpPage!, children[i].itemTitle!),
+          childCount: children.length,
+        ),
       ),
     );
   }
