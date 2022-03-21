@@ -1,0 +1,50 @@
+[
+    {
+      "groupTitle": "01_计数器应用",
+      "children": [
+        {
+          "itemTitle": "计数器",
+          "jumpPageName": "/first_app/counter_page"
+        }
+      ]
+    },
+    {
+      "groupTitle": "02_Widget 简介",
+      "children": [
+        {
+          "itemTitle": "Stateless First",
+          "jumpPageName": "/first_app/stateless_first_page"
+        },
+        {
+          "itemTitle": "Stateful First",
+          "jumpPageName": "/first_app/stateful_first_page"
+        }
+      ]
+    },
+    {
+      "groupTitle": "03_状态管理",
+      "children": [
+        {
+          "itemTitle": "管理自身状态",
+          "jumpPageName": "/first_app/state_manager_page01"
+        },
+        {
+          "itemTitle": "父管理子状态",
+          "jumpPageName": "/first_app/state_manager_page02"
+        },
+        {
+          "itemTitle": "混合状态管理",
+          "jumpPageName": "/first_app/state_manager_page03"
+        }
+      ]
+    },
+    {
+      "groupTitle": "04_路由管理",
+      "children": [
+        {
+          "itemTitle": "路由管理",
+          "jumpPageName": "/first_app/route_manage_home_page"
+        }
+      ]
+    }
+]

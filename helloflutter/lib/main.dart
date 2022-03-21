@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '12_功能性组件/f12_functional_widget_header.dart';
-import '13_事件处理与通知/event_handle_and_notification.dart';
+import 'package:helloflutter/core/routes/app_routes.dart';
 
 void main() => runApp(const MyApp());
 
@@ -12,19 +10,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      // initialRoute: '/',
+      // 应用首页路由
+      initialRoute: '/',
       theme: ThemeData(
-        // primaryColor: const Color.fromARGB(255, 68, 255, 77),
-        primarySwatch: Colors.red,
-      ),
-      // routes: {
-      //   'new_page': (_) => const NewRoute01(),
-      //   '/': (_) => const CenterTest(),
-      //   'tip_page': (context) => TipRoute(
-      //       text: ModalRoute.of(context)!.settings.arguments as String),
-      //   'echo_page': (context) => const EchoRoute()
-      // },
-      home: const EventHandleAndNotificationTest(),
+          // primarySwatch: Colors.red, // 红色主题
+          ),
+      routes: AppRoutes.routes(),
     );
   }
 }

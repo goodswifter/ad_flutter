@@ -1,8 +1,8 @@
-/// 
+///
 /// Author       : zhongaidong
 /// Date         : 2022-03-14 16:55:07
-/// Description  : 
-/// 
+/// Description  :
+///
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -11,7 +11,7 @@ import 'sliver_flexible_header/extra_info_box_constraints.dart';
 
 typedef SliverPersistentHeaderToBoxBuilder = Widget Function(
   BuildContext context,
-  double maxExtent, //当前可用最大高度
+  double maxExtent, // 当前可用最大高度
   bool fixed, // 是否已经固定
 );
 
@@ -22,7 +22,7 @@ class SliverPersistentHeaderToBox extends StatelessWidget {
     required Widget child,
   })  : builder = ((a, b, c) => child),
         super(key: key);
- // builder 构造函数，需要传一个 builder，同样不需要显式指定高度
+  // builder 构造函数，需要传一个 builder，同样不需要显式指定高度
   const SliverPersistentHeaderToBox.builder({
     Key? key,
     required this.builder,
@@ -39,7 +39,7 @@ class SliverPersistentHeaderToBox extends StatelessWidget {
           return builder(
             context,
             constraints.maxHeight,
-            //约束中需要传递的额外信息是一个bool类型，表示 Sliver 是否已经固定到顶部
+            // 约束中需要传递的额外信息是一个bool类型，表示 Sliver 是否已经固定到顶部
             (constraints as ExtraInfoBoxConstraints<bool>).extra,
           );
         },
@@ -69,14 +69,14 @@ class _RenderSliverPersistentHeaderToBox extends RenderSliverSingleBoxAdapter {
     }
     child!.layout(
       ExtraInfoBoxConstraints(
-        //只要 constraints.scrollOffset不为0，则表示已经有内容在当前Sliver下面了，即已经固定到顶部了
+        // 只要 constraints.scrollOffset不为0，则表示已经有内容在当前Sliver下面了，即已经固定到顶部了
         constraints.scrollOffset != 0,
         constraints.asBoxConstraints(
           // 我们将剩余的可绘制空间作为 header 的最大高度约束传递给 LayoutBuilder
           maxExtent: constraints.remainingPaintExtent,
         ),
       ),
-      //我们要根据child大小来确定Sliver大小，所以后面需要用到child的大小（size）信息
+      // 我们要根据child大小来确定Sliver大小，所以后面需要用到child的大小（size）信息
       parentUsesSize: true,
     );
 

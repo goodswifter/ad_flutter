@@ -1,0 +1,102 @@
+[
+    {
+      "groupTitle": "01 原始指针事件处理",
+      "children": [
+        {
+          "itemTitle": "原始事件",
+          "jumpPageName": "/event_handle/listener_page"
+        },
+        {
+          "itemTitle": "忽略事件",
+          "jumpPageName": "/event_handle/absorb_pointer_page"
+        }
+      ]
+    },
+    {
+      "groupTitle": "02 手势识别",
+      "children": [
+        {
+          "itemTitle": "点击、双击、长按",
+          "jumpPageName": "/event_handle/gesture_detector_page"
+        },
+        {
+          "itemTitle": "拖动(任意方向)",
+          "jumpPageName": "/event_handle/drag_random_direction_page"
+        },
+        {
+          "itemTitle": "拖动(单一方向)",
+          "jumpPageName": "/event_handle/drag_single_direction_page"
+        },
+        {
+          "itemTitle": "缩放",
+          "jumpPageName": "/event_handle/scale_page"
+        },
+        {
+          "itemTitle": "手势识别",
+          "jumpPageName": "/event_handle/gesture_recognizer_page"
+        }
+      ]
+    },
+    {
+      "groupTitle": "03 Flutter事件机制",
+      "children": [
+        {
+          "itemTitle": "水印",
+          "jumpPageName": "/event_handle/watermark_page"
+        },
+        {
+          "itemTitle": "Stack Hit Test",
+          "jumpPageName": "/event_handle/stack_event_page"
+        },
+        {
+          "itemTitle": "手势 Hit Test",
+          "jumpPageName": "/event_handle/gesture_hit_test_page"
+        }
+      ]
+    },
+    {
+      "groupTitle": "04 手势原理与手势冲突",
+      "children": [
+        {
+          "itemTitle": "手势竞争",
+          "jumpPageName": "/event_handle/gesture_detector_contend_page"
+        },
+        {
+          "itemTitle": "拖动手势竞争",
+          "jumpPageName": "/event_handle/drag_gesture_contend_page"
+        },
+        {
+          "itemTitle": "多手势冲突",
+          "jumpPageName": "/event_handle/gesture_conflict_page01"
+        },
+        {
+          "itemTitle": "多手势冲突解决",
+          "jumpPageName": "/event_handle/gesture_conflict_page02"
+        },
+        {
+          "itemTitle": "自定义识别器解决冲突",
+          "jumpPageName": "/event_handle/custom_gesture_recognizer_page"
+        }
+      ]
+    },
+    {
+      "groupTitle": "05 事件总线"
+    },
+    {
+      "groupTitle": "06 通知 Notification",
+      "children": [
+        {
+          "itemTitle": "可滚动组件滚动通知",
+          "jumpPageName": "/event_handle/list_view_notifcation_page"
+        },
+        {
+          "itemTitle": "自定义通知",
+          "jumpPageName": "/event_handle/custom_notification_page"
+        },
+        {
+          "itemTitle": "阻止冒泡通知",
+          "jumpPageName": "/event_handle/stop_bubble_notification_page"
+        }
+      ]
+    }
+  ]

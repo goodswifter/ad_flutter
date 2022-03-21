@@ -1,0 +1,10 @@
+[
+    {
+        "itemTitle": "01_第一个flutter应用",
+        "jumpPageName": "/first_app"
+    },
+    {
+        "itemTitle": "07_事件处理与通知",
+        "jumpPageName": "/event_handle"
+    }
+]
