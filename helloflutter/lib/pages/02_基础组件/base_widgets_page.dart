@@ -1,21 +1,20 @@
-///
+/// 
 /// Author       : zhongaidong
-/// Date         : 2022-03-19 11:10:52
-/// Description  : 事件处理与通知
-///
+/// Date         : 2022-03-22 08:25:42
+/// Description  : 基础组件
+/// 
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:helloflutter/core/common/widgets/grid_group_scaffold.dart';
 import 'package:helloflutter/core/const/resource.dart';
 
-class EventHandleAndNotificationPage extends StatelessWidget {
-  const EventHandleAndNotificationPage({Key? key}) : super(key: key);
+class BaseWidgetsPage extends StatelessWidget {
+  const BaseWidgetsPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return const GridGroupScaffold(
-      title: '事件处理与通知',
+      title: '基础组件',
       jsonString: R.ASSETS_JSON_07_EVENT_DATA_JSON,
     );
   }

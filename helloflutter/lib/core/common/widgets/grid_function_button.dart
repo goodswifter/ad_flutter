@@ -1,36 +1,13 @@
+/// 
+/// Author       : zhongaidong
+/// Date         : 2022-03-22 08:16:19
+/// Description  : 
+/// 
+
 import 'package:flutter/material.dart';
 
-class Header extends StatelessWidget {
-  const Header({
-    Key? key,
-    this.index,
-    this.title,
-    this.color = Colors.lightBlue,
-    this.height = 40,
-  }) : super(key: key);
-
-  final String? title;
-  final int? index;
-  final Color color;
-  final double height;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: height,
-      color: color,
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
-      alignment: Alignment.centerLeft,
-      child: Text(
-        title ?? 'Header #$index',
-        style: const TextStyle(color: Colors.white),
-      ),
-    );
-  }
-}
-
-class FunctionButton extends StatelessWidget {
-  const FunctionButton({
+class GridFunctionButton extends StatelessWidget {
+  const GridFunctionButton({
     Key? key,
     this.title = '按钮',
     this.onPressed,
@@ -77,34 +54,6 @@ class FunctionButton extends StatelessWidget {
           title, style: const TextStyle(color: Colors.white),
         ),
       ),
-    );
-  }
-}
-
-class GridButton extends StatelessWidget {
-  const GridButton({
-    Key? key,
-    this.title = '按钮',
-    this.onPressed,
-    this.width = 150,
-    this.height = 54,
-    this.colors,
-  }) : super(key: key);
-
-  final String title;
-  final VoidCallback? onPressed;
-  final double width;
-  final double height;
-  final List<Color>? colors;
-
-  @override
-  Widget build(BuildContext context) {
-    return FunctionButton(
-      title: title,
-      colors: colors ?? const [Colors.green, Colors.purple],
-      onPressed: onPressed,
-      width: width,
-      height: height,
     );
   }
 }

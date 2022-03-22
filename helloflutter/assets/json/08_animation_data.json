@@ -1,0 +1,83 @@
+[
+    {
+      "groupTitle": "01_动画基本结构及状态监听",
+      "children": [
+        {
+          "itemTitle": "基础版本",
+          "jumpPageName": "/animation/scale_animation_page"
+        },
+        {
+          "itemTitle": "AnimatedWidget",
+          "jumpPageName": "/animation/animated_widget_page"
+        },
+        {
+          "itemTitle": "AnimatedBuilder",
+          "jumpPageName": "/animation/animated_builder_page"
+        },
+        {
+          "itemTitle": "AnimatedBuilder封装",
+          "jumpPageName": "/animation/animated_builder_page02"
+        },
+        {
+          "itemTitle": "动画监听",
+          "jumpPageName": "/animation/animation_listener_page"
+        }
+      ]
+    },
+    {
+        "groupTitle": "02_自定义路由切换动画",
+        "children": [
+            {
+              "itemTitle": "自定义路由切换动画",
+              "jumpPageName": "/animation/custom_route_animation_page"
+            },
+            {
+              "itemTitle": "PageRouterBuilder",
+              "jumpPageName": "/animation/page_route_builder_page"
+            }
+        ]
+    },
+    {
+        "groupTitle": "03_hero动画",
+        "children": [
+            {
+              "itemTitle": "自定义Hero动画",
+              "jumpPageName": "/animation/custom_hero_animation_page"
+            },
+            {
+                "itemTitle": "Hero动画",
+                "jumpPageName": "/animation/hero_animation_page"
+            },
+            {
+                "itemTitle": "Hero动画2",
+                "jumpPageName": "/animation/hero_animation_page02"
+            }
+        ]
+    },
+    {
+        "groupTitle": "04_交织动画",
+        "children": [
+            {
+              "itemTitle": "交织动画",
+              "jumpPageName": "/animation/stagger_animation_page"
+            }
+        ]
+    },
+    {
+        "groupTitle": "05_切换动画组件",
+        "children": [
+            {
+              "itemTitle": "AnimatedSwitcher",
+              "jumpPageName": "/animation/animated_switcher_counter_page"
+            },
+            {
+                "itemTitle": "路由平移切换",
+                "jumpPageName": "/animation/animated_switcher_push_page"
+            },
+            {
+                "itemTitle": "滑动出入动画",
+                "jumpPageName": "/animation/slide_transition_x_page"
+            }
+        ]
+    }
+]

@@ -6,5 +6,9 @@
     {
         "itemTitle": "07_事件处理与通知",
         "jumpPageName": "/event_handle"
+    },
+    {
+        "itemTitle": "08_动画",
+        "jumpPageName": "/animation"
     }
 ]

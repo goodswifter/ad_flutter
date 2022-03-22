@@ -5,7 +5,6 @@
 /// 
 
 import 'package:flutter/material.dart';
-import 'package:helloflutter/core/routes/f07_event_names.dart';
 import 'package:helloflutter/pages/07_%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E4%B8%8E%E9%80%9A%E7%9F%A5/01_%E5%8E%9F%E5%A7%8B%E6%8C%87%E9%92%88%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86/f01_listener_page.dart';
 import 'package:helloflutter/pages/07_%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E4%B8%8E%E9%80%9A%E7%9F%A5/01_%E5%8E%9F%E5%A7%8B%E6%8C%87%E9%92%88%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86/f02_absorb_pointer_page.dart';
 import 'package:helloflutter/pages/07_%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E4%B8%8E%E9%80%9A%E7%9F%A5/02_%E6%89%8B%E5%8A%BF%E8%AF%86%E5%88%AB/01_%E6%89%8B%E5%8A%BF%E6%A3%80%E6%B5%8B%E5%99%A8(GestureDetector)/f01_gesture_detector_page.dart';
@@ -25,6 +24,8 @@ import 'package:helloflutter/pages/07_%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E4%B8
 import 'package:helloflutter/pages/07_%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E4%B8%8E%E9%80%9A%E7%9F%A5/06_%E9%80%9A%E7%9F%A5(Notification)/f02_custom_notification_page.dart';
 import 'package:helloflutter/pages/07_%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E4%B8%8E%E9%80%9A%E7%9F%A5/06_%E9%80%9A%E7%9F%A5(Notification)/f03_stop_bubble_notification_page.dart';
 import 'package:helloflutter/pages/07_%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E4%B8%8E%E9%80%9A%E7%9F%A5/event_handle_and_notification_page.dart';
+
+import 'f07_event_names.dart';
 
 abstract class EventRoutes {
   static Map<String, WidgetBuilder> routes = {

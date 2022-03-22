@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:helloflutter/core/routes/f01_first_app_names.dart';
+import 'package:helloflutter/core/routes/subroutes/f01_first_app_names.dart';
+
 ///
 /// Author       : zhongaidong
 /// Date         : 2022-02-27 12:06:14
@@ -30,7 +31,8 @@ class RouteManageHomePage extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () async {
-                var result = await Navigator.pushNamed(context, FirstAppNames.tipRoutePage,
+                var result = await Navigator.pushNamed(
+                    context, FirstAppNames.tipRoutePage,
                     arguments: '传参02');
                 // 打开`TipRoute`，并等待返回结果
                 // var result = await Navigator.push(
@@ -46,7 +48,8 @@ class RouteManageHomePage extends StatelessWidget {
             ElevatedButton(
               onPressed: () async {
                 // 打开`TipRoute`，并等待返回结果
-                var result = await Navigator.pushNamed(context, FirstAppNames.echoRoutePage,
+                var result = await Navigator.pushNamed(
+                    context, FirstAppNames.echoRoutePage,
                     arguments: '命名路由参数');
                 print('路由返回值: $result');
               },
