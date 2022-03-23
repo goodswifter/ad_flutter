@@ -18,6 +18,10 @@ class R {
   static const String ASSETS_JSON_08_ANIMATION_DATA_JSON =
       'assets/json/08_animation_data.json';
 
+  /// ![preview](file:///Users/zad/Documents/flutter/ad_f/helloflutter/assets/json/09_custom_widget_data.json)
+  static const String ASSETS_JSON_09_CUSTOM_WIDGET_DATA_JSON =
+      'assets/json/09_custom_widget_data.json';
+
   /// ![preview](file:///Users/zad/Documents/flutter/ad_f/helloflutter/assets/json/home_data.json)
   static const String ASSETS_JSON_HOME_DATA_JSON = 'assets/json/home_data.json';
 }

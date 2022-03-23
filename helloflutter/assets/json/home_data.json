@@ -10,5 +10,9 @@
     {
         "itemTitle": "08_动画",
         "jumpPageName": "/animation"
+    },
+    {
+        "itemTitle": "09_自定义组件",
+        "jumpPageName": "/custom_widget"
     }
 ]

@@ -1,0 +1,42 @@
+[
+    {
+      "groupTitle": "01_组合现有组件",
+      "children": [
+        {
+          "itemTitle": "渐变按钮",
+          "jumpPageName": "/custom_widget/gradient_button_page"
+        }
+      ]
+    },
+    {
+        "groupTitle": "02_组合实例",
+        "children": [
+          {
+            "itemTitle": "旋转组件",
+            "jumpPageName": "/custom_widget/turn_box_page"
+          }
+        ]
+    },
+    {
+        "groupTitle": "03_CustomPaint与Canvas",
+        "children": [
+          {
+            "itemTitle": "自定义图形绘制Widget",
+            "jumpPageName": "/custom_widget/custom_paint_page"
+          },
+          {
+            "itemTitle": "自定义弧形",
+            "jumpPageName": "/custom_widget/paint_arc_page"
+          }
+        ]
+    },
+    {
+        "groupTitle": "04_自绘实例",
+        "children": [
+          {
+            "itemTitle": "圆形背景渐变进度条",
+            "jumpPageName": "/custom_widget/gradient_circular_progress_page"
+          }
+        ]
+    }
+]
