@@ -18,6 +18,8 @@ import 'package:helloflutter/pages/08_%E5%8A%A8%E7%94%BB/04_%E4%BA%A4%E7%BB%87%E
 import 'package:helloflutter/pages/08_%E5%8A%A8%E7%94%BB/05_%E5%8A%A8%E7%94%BB%E5%88%87%E6%8D%A2%E7%BB%84%E4%BB%B6/f01_animated_switcher_counter_page.dart';
 import 'package:helloflutter/pages/08_%E5%8A%A8%E7%94%BB/05_%E5%8A%A8%E7%94%BB%E5%88%87%E6%8D%A2%E7%BB%84%E4%BB%B6/f02_animated_switcher_push_page.dart';
 import 'package:helloflutter/pages/08_%E5%8A%A8%E7%94%BB/05_%E5%8A%A8%E7%94%BB%E5%88%87%E6%8D%A2%E7%BB%84%E4%BB%B6/f03_slide_transition_x_page.dart';
+import 'package:helloflutter/pages/08_%E5%8A%A8%E7%94%BB/06_%E5%8A%A8%E7%94%BB%E8%BF%87%E6%B8%A1%E7%BB%84%E4%BB%B6/f01_animated_decorated_box01_page.dart';
+import 'package:helloflutter/pages/08_%E5%8A%A8%E7%94%BB/06_%E5%8A%A8%E7%94%BB%E8%BF%87%E6%B8%A1%E7%BB%84%E4%BB%B6/f02_animated_widgets_test_page.dart';
 import 'package:helloflutter/pages/08_%E5%8A%A8%E7%94%BB/animation_page.dart';
 
 import 'f08_animation_names.dart';
@@ -50,9 +52,14 @@ abstract class AnimationRoutes {
     AnimationNames.staggerAnimationPage: ((_) => const StaggerAnimationPage()),
 
     // ------------------- 05_切换动画组件 -------------------
-    AnimationNames.animatedSwitcherCounterPage: ((_) => const AnimatedSwitcherCounterPage()),
-    AnimationNames.animatedSwitcherPushPage: ((_) => const AnimatedSwitcherPushPage()),
+    AnimationNames.animatedSwitcherCounterPage: ((_) =>
+        const AnimatedSwitcherCounterPage()),
+    AnimationNames.animatedSwitcherPushPage: ((_) =>
+        const AnimatedSwitcherPushPage()),
     AnimationNames.slideTransitionXPage: ((_) => const SlideTransitionXPage()),
-    
+
+    // ------------------- 06_动画过渡组件 -------------------
+    AnimationNames.animatedDecoratedBox01Page: ((_) => const AnimatedDecoratedBox01Page()),
+    AnimationNames.animatedWidgetsTestPage: ((_) => const AnimatedWidgetsTestPage()),
   };
 }

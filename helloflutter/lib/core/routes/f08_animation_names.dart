@@ -33,4 +33,8 @@ abstract class AnimationNames {
   static const animatedSwitcherPushPage = '/animation/animated_switcher_push_page';
   static const slideTransitionXPage = '/animation/slide_transition_x_page';
 
+  // ------------------- 06_动画过渡组件 -------------------
+  static const animatedDecoratedBox01Page = '/animation/animated_decorated_box01_page';
+  static const animatedWidgetsTestPage = '/animation/animated_widgets_test_page';
+
 }

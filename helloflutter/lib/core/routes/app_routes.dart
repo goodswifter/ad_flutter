@@ -28,7 +28,7 @@ abstract class AppRoutes {
 
   static Map<String, WidgetBuilder> mainRoutes = {
     // ------------------- Main -------------------
-    initial: (_) => const HomePage(),
-    // initial: (_) => const AnimationPage(),
+    // initial: (_) => const HomePage(),
+    initial: (_) => const AnimationPage(),
   };
 }

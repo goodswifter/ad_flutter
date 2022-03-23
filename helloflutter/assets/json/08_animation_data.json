@@ -79,5 +79,18 @@
                 "jumpPageName": "/animation/slide_transition_x_page"
             }
         ]
+    },
+    {
+        "groupTitle": "06_动画过渡组件",
+        "children": [
+            {
+              "itemTitle": "Decoration属性过渡",
+              "jumpPageName": "/animation/animated_decorated_box01_page"
+            },
+            {
+              "itemTitle": "flutter预置过渡组件",
+              "jumpPageName": "/animation/animated_widgets_test_page"
+            }
+        ]
     }
 ]
