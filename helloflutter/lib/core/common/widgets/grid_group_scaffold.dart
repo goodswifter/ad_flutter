@@ -6,8 +6,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:helloflutter/core/common/common_grid_group.dart';
 import 'package:helloflutter/core/common/sticky_header_grid.dart';
+import 'package:helloflutter/models/model_header.dart';
 
 class GridGroupScaffold extends StatelessWidget {
   const GridGroupScaffold({
@@ -30,18 +30,20 @@ class GridGroupScaffold extends StatelessWidget {
             if (snapshot.hasError) {
               return Text('Error ${snapshot.error}');
             } else {
-              List<CommonGridGroupModel> groupModels =
-                  groupDataFromJson(snapshot.data);
+              List<CommonGridGroup> groupModels =
+                  commonGridGroupFromJson(snapshot.data);
+              print(groupModels.length);
               List<Widget> grids = [];
               int count = groupModels.length;
               for (var i = 0; i < count; i++) {
-                CommonGridGroupModel e = groupModels[i];
+                CommonGridGroup e = groupModels[i];
                 grids.add(StickyHeaderGrid(
                   isSafeArea: i == count - 1,
                   groupTitle: e.groupTitle ?? '哈哈',
                   children: e.children ?? [],
                 ));
               }
+              
 
               return CustomScrollView(slivers: grids);
             }

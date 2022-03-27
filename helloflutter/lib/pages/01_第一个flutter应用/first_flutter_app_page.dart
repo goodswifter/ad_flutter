@@ -6,9 +6,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:helloflutter/core/common/common_grid_group.dart';
 import 'package:helloflutter/core/common/sticky_header_grid.dart';
 import 'package:helloflutter/core/const/resource.dart';
+import 'package:helloflutter/models/model_header.dart';
 
 class FirstFlutterAppPage extends StatelessWidget {
   const FirstFlutterAppPage({Key? key}) : super(key: key);
@@ -24,8 +24,8 @@ class FirstFlutterAppPage extends StatelessWidget {
             if (snapshot.hasError) {
               return Text('Error ${snapshot.error}');
             } else {
-              List<CommonGridGroupModel> firstAppModels =
-                  groupDataFromJson(snapshot.data);
+              List<CommonGridGroup> firstAppModels =
+                  commonGridGroupFromJson(snapshot.data);
               List<Widget> grids = firstAppModels
                   .map((e) => StickyHeaderGrid(
                         groupTitle: e.groupTitle ?? '哈哈',

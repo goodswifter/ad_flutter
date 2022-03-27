@@ -6,7 +6,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:helloflutter/widgets/watermark/text_watermark_pointer.dart';
-import 'package:helloflutter/widgets/watermark/watermark.dart';
+import 'package:helloflutter/widgets/watermark/watermark_widget.dart';
 
 class WatermarkPage extends StatelessWidget {
   const WatermarkPage({Key? key}) : super(key: key);

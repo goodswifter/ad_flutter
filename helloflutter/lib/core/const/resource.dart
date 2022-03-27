@@ -22,6 +22,10 @@ class R {
   static const String ASSETS_JSON_09_CUSTOM_WIDGET_DATA_JSON =
       'assets/json/09_custom_widget_data.json';
 
+  /// ![preview](file:///Users/zad/Documents/flutter/ad_f/helloflutter/assets/json/10_file_network_data.json)
+  static const String ASSETS_JSON_10_FILE_NETWORK_DATA_JSON =
+      'assets/json/10_file_network_data.json';
+
   /// ![preview](file:///Users/zad/Documents/flutter/ad_f/helloflutter/assets/json/home_data.json)
   static const String ASSETS_JSON_HOME_DATA_JSON = 'assets/json/home_data.json';
 }

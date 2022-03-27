@@ -80,6 +80,9 @@
       ]
     },
     {
+        "groupTitle": "05_事件总线"
+    },
+    {
       "groupTitle": "06 通知 Notification",
       "children": [
         {

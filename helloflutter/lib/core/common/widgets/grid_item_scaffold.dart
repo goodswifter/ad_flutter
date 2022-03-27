@@ -36,21 +36,28 @@ class GridItemScraffold extends StatelessWidget {
               // 请求成功，显示数据
               List<CommonGridItem> gridItems =
                   commonGridItemFromJson(snapshot.data);
-              return GridView.builder(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 4.0,
-                  mainAxisExtent: 100,
-                ),
-                itemCount: gridItems.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return jumpButton(
-                    context,
-                    gridItems[index].jumpPageName!,
-                    gridItems[index].itemTitle!,
-                  );
-                },
-              );
+              if (gridItems.isEmpty) {
+                return const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Center(child: Text('暂无数据')),
+                );
+              } else {
+                return GridView.builder(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 4.0,
+                    mainAxisExtent: 100,
+                  ),
+                  itemCount: gridItems.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return jumpButton(
+                      context,
+                      gridItems[index].jumpPageName!,
+                      gridItems[index].itemTitle!,
+                    );
+                  },
+                );
+              }
             }
           } else {
             return const Center(child: CupertinoActivityIndicator());

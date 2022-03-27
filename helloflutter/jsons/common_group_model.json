@@ -1,0 +1,7 @@
+{
+    "@meta": {
+        "className": "CommonGroupModel"
+    },
+    "groupTitle?": "01 原始指针事件处理",
+    "children?": "$[]commonItemModel"
+}

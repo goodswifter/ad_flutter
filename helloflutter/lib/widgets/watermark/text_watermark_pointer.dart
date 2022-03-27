@@ -5,7 +5,6 @@
 ///
 
 import 'package:flutter/material.dart';
-import 'dart:ui' as ui;
 import 'dart:math' as math;
 
 import 'watermark_pointer.dart';

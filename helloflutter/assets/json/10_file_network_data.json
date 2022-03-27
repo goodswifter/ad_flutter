@@ -1,10 +1,10 @@
 [
     {
-      "groupTitle": "01_组合现有组件",
+      "groupTitle": "01_文件操作",
       "children": [
         {
-          "itemTitle": "渐变按钮",
-          "jumpPageName": "/custom_widget/gradient_button_page"
+          "itemTitle": "文件操作",
+          "jumpPageName": "/file_network/file_operation_page"
         }
       ]
     },
@@ -13,7 +13,7 @@
         "children": [
           {
             "itemTitle": "旋转组件",
-            "jumpPageName": "/custom_widget/turn_box_page"
+            "jumpPageName": "/file_network/turn_box_page"
           }
         ]
     },
@@ -22,11 +22,11 @@
         "children": [
           {
             "itemTitle": "自定义图形绘制Widget",
-            "jumpPageName": "/custom_widget/custom_paint_page"
+            "jumpPageName": "/file_network/custom_paint_page"
           },
           {
             "itemTitle": "自定义弧形",
-            "jumpPageName": "/custom_widget/paint_arc_page"
+            "jumpPageName": "/file_network/paint_arc_page"
           }
         ]
     },
@@ -35,7 +35,7 @@
         "children": [
           {
             "itemTitle": "圆形背景渐变进度条",
-            "jumpPageName": "/custom_widget/gradient_circular_progress_page"
+            "jumpPageName": "/file_network/gradient_circular_progress_page"
           }
         ]
     },
@@ -44,11 +44,11 @@
         "children": [
           {
             "itemTitle": "自定义复选框",
-            "jumpPageName": "/custom_widget/custom_checkbox_page"
+            "jumpPageName": "/file_network/custom_checkbox_page"
           },
           {
             "itemTitle": "完成Widget",
-            "jumpPageName": "/custom_widget/done_widget_page"
+            "jumpPageName": "/file_network/done_widget_page"
           }
         ]
     },
@@ -57,7 +57,7 @@
         "children": [
           {
             "itemTitle": "水印测试",
-            "jumpPageName": "/custom_widget/watermark_page01"
+            "jumpPageName": "/file_network/watermark_page01"
           }
         ]
     }

@@ -21,16 +21,11 @@ abstract class CustomWidgetNames {
   static const gradientCircularProgressPage =
       '/custom_widget/gradient_circular_progress_page';
 
-  // ------------------- 05_切换动画组件 -------------------
-  static const animatedSwitcherCounterPage =
-      '/custom_widget/animated_switcher_counter_page';
-  static const animatedSwitcherPushPage =
-      '/custom_widget/animated_switcher_push_page';
-  static const slideTransitionXPage = '/custom_widget/slide_transition_x_page';
+  // ------------------- 05_自绘实例 -------------------
+  static const customCheckboxPage = '/custom_widget/custom_checkbox_page';
+  static const doneWidgetPage = '/custom_widget/done_widget_page';
 
-  // ------------------- 06_动画过渡组件 -------------------
-  static const animatedDecoratedBox01Page =
-      '/custom_widget/animated_decorated_box01_page';
-  static const animatedWidgetsTestPage =
-      '/custom_widget/animated_widgets_test_page';
+  // ------------------- 06_水印实例 -------------------
+  static const watermarkPage01 =
+      '/custom_widget/watermark_page01';
 }
