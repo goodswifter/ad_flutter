@@ -1,10 +1,6 @@
-///
-/// Author       : zhongaidong
-/// Date         : 2022-03-27 14:58:18
-/// Description  :
-///
-
 import 'dart:convert';
+
+import 'common_grid_item.dart';
 
 List<CommonGridGroup> commonGridGroupFromJson(String str) =>
     List<CommonGridGroup>.from(
@@ -39,26 +35,4 @@ class CommonGridGroup {
       };
 }
 
-class CommonGridItem {
-  CommonGridItem({
-    this.itemTitle,
-    this.jumpPageName,
-  });
 
-  String? itemTitle;
-  String? jumpPageName;
-
-  factory CommonGridItem.fromJson(Map<String, dynamic> json) => CommonGridItem(
-        itemTitle: json["itemTitle"],
-        jumpPageName: json["jumpPageName"],
-      );
-
-  Map<String, dynamic> toJson() => {
-        "itemTitle": itemTitle,
-        "jumpPageName": jumpPageName,
-      };
-}
-
-// To parse this JSON data, do
-//
-//     final commonGridGroup = commonGridGroupFromJson(jsonString);

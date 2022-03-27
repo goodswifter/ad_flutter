@@ -32,7 +32,6 @@ class GridGroupScaffold extends StatelessWidget {
             } else {
               List<CommonGridGroup> groupModels =
                   commonGridGroupFromJson(snapshot.data);
-              print(groupModels.length);
               List<Widget> grids = [];
               int count = groupModels.length;
               for (var i = 0; i < count; i++) {

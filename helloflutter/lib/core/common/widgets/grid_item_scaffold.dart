@@ -6,8 +6,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:helloflutter/models/model_header.dart';
 
-import '../common_grid_item.dart';
 import 'grid_function_button.dart';
 
 class GridItemScraffold extends StatelessWidget {
