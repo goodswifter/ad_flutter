@@ -3,7 +3,6 @@
 /// Date         : 2022-03-05 10:17:10
 /// Description  : 单行缩放布局FittedBox
 ///
-
 import 'package:flutter/material.dart';
 
 class SingleLineFittedBox extends StatelessWidget {
