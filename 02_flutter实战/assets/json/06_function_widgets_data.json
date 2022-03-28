@@ -1,0 +1,73 @@
+[
+    {
+      "groupTitle": "01_导航返回拦截",
+      "children": [
+        {
+          "itemTitle": "拦截返回测试",
+          "jumpPageName": "/function_widgets/will_pop_scope_page"
+        }
+      ]
+    },
+    {
+      "groupTitle": "02_数据共享",
+      "children": [
+        {
+          "itemTitle": "数据共享",
+          "jumpPageName": "/function_widgets/inherited_widget_page"
+        }
+      ]
+    },
+    {
+      "groupTitle": "03_跨组件状态共享Provider",
+      "children": [
+        {
+          "itemTitle": "Provider",
+          "jumpPageName": "/function_widgets/provider_page"
+        }
+      ]
+    },
+    {
+      "groupTitle": "04_颜色和主题",
+      "children": [
+        {
+          "itemTitle": "颜色",
+          "jumpPageName": "/function_widgets/color_page"
+        },
+        {
+          "itemTitle": "主题",
+          "jumpPageName": "/function_widgets/theme_page"
+        }
+      ]
+    },
+    {
+      "groupTitle": "05_局部刷新",
+      "children": [
+        {
+          "itemTitle": "局部刷新",
+          "jumpPageName": "/function_widgets/value_listenable_page"
+        }
+      ]
+    },
+    {
+      "groupTitle": "06_异步UI更新",
+      "children": [
+        {
+          "itemTitle": "FutureBuilder",
+          "jumpPageName": "/function_widgets/future_builder_page"
+        },
+        {
+          "itemTitle": "StreamBuilder",
+          "jumpPageName": "/function_widgets/stream_builder_page"
+        }
+      ]
+    },
+    {
+      "groupTitle": "07_对话框",
+      "children": [
+        {
+          "itemTitle": "对话框",
+          "jumpPageName": "/function_widgets/dialog_all_page"
+        }
+      ]
+    }
+]

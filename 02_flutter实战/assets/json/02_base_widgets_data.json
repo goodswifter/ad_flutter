@@ -1,0 +1,26 @@
+[
+    {
+        "itemTitle": "Text文本",
+        "jumpPageName": "/base_widgets/text_page"
+    },
+    {
+        "itemTitle": "文本框",
+        "jumpPageName": "/base_widgets/text_field_page"
+    },
+    {
+        "itemTitle": "表单",
+        "jumpPageName": "/base_widgets/form_page"
+    },
+    {
+        "itemTitle": "直线进度指示器",
+        "jumpPageName": "/base_widgets/linear_progress_indicator_page"
+    },
+    {
+        "itemTitle": "圆形进度指示器",
+        "jumpPageName": "/base_widgets/circular_progress_indicator_page"
+    },
+    {
+        "itemTitle": "获取State对象",
+        "jumpPageName": "/base_widgets/get_state_object_page"
+    }
+]
