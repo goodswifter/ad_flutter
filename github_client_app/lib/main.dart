@@ -41,13 +41,14 @@ class MyApp extends StatelessWidget {
             S.delegate,
           ],
           locale: localeVM.getLocale(),
+          initialRoute: '/',
           // 注册路由表
           routes: <String, WidgetBuilder>{
+            "/": (_) => const HomePage(),
             "login": (_) => const LoginRoute(),
             "themes": (_) => const ThemeChangeRoute(),
             "language": (_) => const LanguageRoute(),
           },
-          home: const HomePage(),
           builder: EasyLoading.init(),
         );
       }),

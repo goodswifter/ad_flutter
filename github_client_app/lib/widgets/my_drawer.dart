@@ -6,6 +6,8 @@
 import 'package:flutter/material.dart';
 import 'package:github_client_app/common/const/resource.dart';
 import 'package:github_client_app/generated/l10n.dart';
+import 'package:github_client_app/routes/home_page.dart';
+import 'package:github_client_app/routes/language_page.dart';
 import 'package:github_client_app/states/view_model_index.dart';
 import 'package:provider/provider.dart';
 
@@ -36,12 +38,12 @@ class MyDrawer extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.color_lens),
               title: Text(sl.theme),
-              onTap: () => Navigator.pushNamed(context, "themes"),
+              onTap: () => Navigator.popAndPushNamed(context, "themes"),
             ),
             ListTile(
               leading: const Icon(Icons.language),
               title: Text(sl.language),
-              onTap: () => Navigator.pushNamed(context, "language"),
+              onTap: () => Navigator.popAndPushNamed(context, 'language'),
             ),
             if (userVM.isLogin)
               ListTile(

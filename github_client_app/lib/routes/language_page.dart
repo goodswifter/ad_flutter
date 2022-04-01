@@ -3,7 +3,6 @@
 /// Date         : 2022-03-31 18:57:38
 /// Description  :
 ///
-
 import 'package:flutter/material.dart';
 import 'package:github_client_app/generated/l10n.dart';
 import 'package:github_client_app/states/view_model_index.dart';
@@ -34,7 +33,9 @@ class LanguageRoute extends StatelessWidget {
     }
 
     return Scaffold(
-      appBar: AppBar(title: Text(sl.language)),
+      appBar: AppBar(
+        title: Text(sl.language),
+      ),
       body: ListView(
         children: [
           _wLanguageItem("中文简体", "zh_CN"),

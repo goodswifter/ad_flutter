@@ -16,7 +16,7 @@ import 'package:github_client_app/states/view_model_index.dart';
 
 /*
 用户名: goodswifter
-密码  : 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 
+密码  : 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 
  */
 class LoginRoute extends StatefulWidget {
   const LoginRoute({Key? key}) : super(key: key);
