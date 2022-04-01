@@ -38,5 +38,9 @@
     {
         "itemTitle": "10_文件操作与网络请求",
         "jumpPageName": "/file_network"
+    },
+    {
+        "itemTitle": "11_flutter核心原理",
+        "jumpPageName": "/flutter_core"
     }
 ]

@@ -1,0 +1,18 @@
+{
+    "title": "github client",
+    "home": "github client",
+    "login": "login",
+    "noDescription": "no description",
+    "theme": "change theme",
+    "language": "language",
+    "logout": "logout",
+    "logoutTip": "confirm logout",
+    "yes": "Yes",
+    "cancel": "Cancel",
+    "userName": "user name",
+    "password": "password",
+    "userNameRequired": "userName is required",
+    "passwordRequired": "password is required",
+    "userNameOrPasswordWrong": "user name or password wrong",
+    "auto": "Auto"
+}

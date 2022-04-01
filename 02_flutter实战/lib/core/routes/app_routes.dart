@@ -4,6 +4,7 @@
 /// Description  :
 ///
 import 'package:flutter/material.dart';
+import 'package:flutter_combat/core/routes/subroutes/f11_flutter_core_routes.dart';
 import 'package:flutter_combat/pages/main/home_page.dart';
 
 import 'subroutes/f01_first_app_routes.dart';
@@ -43,6 +44,8 @@ abstract class AppRoutes {
     routes.addAll(CustomWidgetRoutes.routes);
     // 10_文件操作与网络请求
     routes.addAll(FileNetworkRoutes.routes);
+    // 10_文件操作与网络请求
+    routes.addAll(FlutterCoreRoutes.routes);
     return routes;
   }
 

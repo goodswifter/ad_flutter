@@ -1,0 +1,1 @@
+2022-03-29 10:28:59.745210  : FileSystemException: Cannot open file, path = '/Users/zad/Documents/flutter/ad_f/03_国际化/pubspec.yaml' (OS Error: No such file or directory, errno = 2)
