@@ -1,0 +1,64 @@
+name: github_client_app
+description: github客户端开发
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.16.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # 国际化依赖
+  flutter_localizations:
+    sdk: flutter
+  # 持久化 https://pub.flutter-io.cn/packages/shared_preferences
+  shared_preferences: ^2.0.13
+  # 网络请求 https://pub.flutter-io.cn/packages/dio
+  dio: ^4.0.5 
+  # 状态管理 https://pub.flutter-io.cn/packages/provider
+  provider: ^6.0.2
+  # 网络图片缓存库 https://pub.flutter-io.cn/packages/cached_network_image
+  cached_network_image: ^3.2.0
+  # Loading和Toast https://pub.flutter-io.cn/packages/flutter_easyloading
+  flutter_easyloading: ^3.0.3
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^1.0.0
+
+flutter:
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/imgs/
+    - assets/jsons/
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
+
+flutter_intl:
+  enabled: true

@@ -1,0 +1,18 @@
+{
+    "title": "github 客户端",
+    "home": "github 客户端",
+    "login": "登录",
+    "noDescription": "暂无描述",
+    "theme": "换肤",
+    "language": "语言",
+    "logout": "登出",
+    "logoutTip": "确认登出",
+    "yes": "确定",
+    "cancel": "取消",
+    "userName": "用户名",
+    "password": "密码",
+    "userNameRequired": "用户名不能为空",
+    "passwordRequired": "密码不能为空",
+    "userNameOrPasswordWrong": "用户名或密码错误",
+    "auto": "跟随系统"
+}

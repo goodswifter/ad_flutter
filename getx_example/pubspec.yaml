@@ -1,0 +1,31 @@
+name: getx_example
+description: A new Flutter project.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.16.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # 状态管理Getx https://pub.flutter-io.cn/packages/get
+  get: ^4.6.1
+  # ListView分组 https://pub.flutter-io.cn/packages/flutter_sticky_header
+  flutter_sticky_header: ^0.6.1
+
+  # iOS style icons
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+
+flutter:
+  # the material Icons class.
+  uses-material-design: true
+
+  # assets:
+  #   - images/a_dot_burr.jpeg
+  #   - images/a_dot_ham.jpeg
