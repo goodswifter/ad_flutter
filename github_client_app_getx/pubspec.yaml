@@ -18,7 +18,9 @@ dependencies:
   # 网络请求 https://pub.flutter-io.cn/packages/dio
   dio: ^4.0.5 
   # 状态管理 https://pub.flutter-io.cn/packages/provider
-  provider: ^6.0.2
+  # provider: ^6.0.2
+  # get 状态管理 https://pub.flutter-io.cn/packages/get
+  get: ^4.6.1
   # 网络图片缓存库 https://pub.flutter-io.cn/packages/cached_network_image
   cached_network_image: ^3.2.0
   # Loading和Toast https://pub.flutter-io.cn/packages/flutter_easyloading

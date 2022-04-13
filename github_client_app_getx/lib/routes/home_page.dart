@@ -4,11 +4,11 @@
 /// Description  : 用户项目列表
 ///
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:github_client_app/common/net/git.dart';
 import 'package:github_client_app/generated/l10n.dart';
 import 'package:github_client_app/models/index.dart';
-import 'package:provider/provider.dart';
-import 'package:github_client_app/states/view_model_index.dart';
+import 'package:github_client_app/states/profile_controller.dart';
 
 import '../widgets/my_drawer.dart';
 import '../widgets/repo_item.dart';
@@ -21,6 +21,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final profileController = Get.put(ProfileController());
+  final profileState = Get.find<ProfileController>().state;
   static const loadingTag = "##loading##"; // 表尾标记
   final _items = <Repo>[Repo()..name = loadingTag];
   bool hasMore = true; // 是否还有数据
@@ -30,19 +32,20 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(S.of(context).home)),
-      body: _buildBody(), // 构建主页面
-      drawer: const MyDrawer(), // 抽屉菜单
+      body: GetBuilder<ProfileController>(
+        builder: (_) => _buildBody(),
+      ), // 构建主页面
+      drawer: MyDrawer(), // 抽屉菜单
     );
   }
 
   _buildBody() {
-    UserViewModel userVM = Provider.of<UserViewModel>(context);
-    if (!userVM.isLogin) {
+    if (!profileState.isLogin) {
       // 用户未登录，显示登录按钮
       return Center(
         child: ElevatedButton(
           child: Text(S.of(context).login),
-          onPressed: () => Navigator.pushNamed(context, 'login'),
+          onPressed: () => Get.toNamed('login'),
         ),
       );
     } else {
@@ -78,7 +81,6 @@ class _HomePageState extends State<HomePage> {
               );
             }
           }
-
           // 显示单词列表项
           return RepoItem(_items[index]);
         },

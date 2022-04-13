@@ -4,48 +4,48 @@
 /// Description  : 抽屉菜单
 ///
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:github_client_app/common/const/resource.dart';
 import 'package:github_client_app/generated/l10n.dart';
-import 'package:github_client_app/routes/home_page.dart';
-import 'package:github_client_app/routes/language_page.dart';
-import 'package:github_client_app/states/view_model_index.dart';
-import 'package:provider/provider.dart';
+import 'package:github_client_app/states/profile_controller.dart';
 
 import 'gm_avatar.dart';
 
 class MyDrawer extends StatelessWidget {
-  const MyDrawer({Key? key}) : super(key: key);
+  MyDrawer({Key? key}) : super(key: key);
+
+  final profileState = Get.find<ProfileController>().state;
 
   @override
   Widget build(BuildContext context) {
     return Drawer(
       child: Column(
         children: [
-          _wHeader(),
-          Expanded(child: _buildMenus()),
+          _wHeader(context),
+          Expanded(child: _buildMenus(context)),
         ],
       ),
     );
   }
 
   /// 构建菜单项
-  Widget _buildMenus() {
-    return Consumer<UserViewModel>(
-      builder: (BuildContext context, UserViewModel userVM, Widget? child) {
+  Widget _buildMenus(BuildContext context) {
+    return GetBuilder<ProfileController>(
+      builder: (profileCtrl) {
         var sl = S.of(context);
         return ListView(
           children: [
             ListTile(
               leading: const Icon(Icons.color_lens),
               title: Text(sl.theme),
-              onTap: () => Navigator.popAndPushNamed(context, "themes"),
+              onTap: () => Get.offAndToNamed('/themes'),
             ),
             ListTile(
               leading: const Icon(Icons.language),
               title: Text(sl.language),
-              onTap: () => Navigator.popAndPushNamed(context, 'language'),
+              onTap: () => Get.offAndToNamed('/language'),
             ),
-            if (userVM.isLogin)
+            if (profileState.isLogin)
               ListTile(
                 leading: const Icon(Icons.power_settings_new),
                 title: Text(sl.logout),
@@ -59,14 +59,14 @@ class MyDrawer extends StatelessWidget {
                         actions: [
                           TextButton(
                             child: Text(sl.cancel),
-                            onPressed: () => Navigator.pop(context),
+                            onPressed: () => Get.back(),
                           ),
                           TextButton(
                             child: Text(sl.yes),
                             onPressed: () {
                               // 该赋值语句会触发MaterialApp rebuild
-                              userVM.user = null;
-                              Navigator.pop(context);
+                              profileCtrl.updateUser(null);
+                              Get.offNamedUntil('/', (route) => false);
                             },
                           ),
                         ],
@@ -82,9 +82,9 @@ class MyDrawer extends StatelessWidget {
   }
 
   /// 构建抽屉菜单头部
-  Widget _wHeader() {
-    return Consumer<UserViewModel>(
-      builder: (context, userVM, child) {
+  Widget _wHeader(BuildContext context) {
+    return GetBuilder<ProfileController>(
+      builder: (profileCtrl) {
         return GestureDetector(
           child: Container(
             color: Theme.of(context).primaryColor,
@@ -95,8 +95,8 @@ class MyDrawer extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: ClipOval(
                     // 如果已登录，则显示用户头像；若未登录，则显示默认头像
-                    child: userVM.isLogin
-                        ? gmAvatar(userVM.user!.avatarUrl!, width: 80)
+                    child: profileState.isLogin
+                        ? gmAvatar(profileState.user!.avatarUrl!, width: 80)
                         : Image.asset(
                             R.assetsImgsAvatarDefaultPng,
                             width: 80,
@@ -104,7 +104,9 @@ class MyDrawer extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  userVM.isLogin ? userVM.user!.login! : S.of(context).login,
+                  profileState.isLogin
+                      ? profileState.user!.login!
+                      : S.of(context).login,
                   style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
@@ -114,7 +116,7 @@ class MyDrawer extends StatelessWidget {
             ),
           ),
           onTap: () {
-            if (!userVM.isLogin) Navigator.pushNamed(context, 'login');
+            if (!profileState.isLogin) Get.toNamed('/login');
           },
         );
       },

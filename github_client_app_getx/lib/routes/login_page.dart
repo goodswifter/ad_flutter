@@ -3,20 +3,19 @@
 /// Date         : 2022-03-31 18:57:38
 /// Description  :
 ///
-
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:get/get.dart';
 import 'package:github_client_app/common/global.dart';
 import 'package:github_client_app/common/net/git.dart';
 import 'package:github_client_app/generated/l10n.dart';
 import 'package:github_client_app/models/index.dart';
-import 'package:provider/provider.dart';
-import 'package:github_client_app/states/view_model_index.dart';
+import 'package:github_client_app/states/profile_controller.dart';
 
 /*
 用户名: goodswifter
-密码  : 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 
+密码  : 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 
  */
 class LoginRoute extends StatefulWidget {
   const LoginRoute({Key? key}) : super(key: key);
@@ -26,6 +25,7 @@ class LoginRoute extends StatefulWidget {
 }
 
 class _LoginRouteState extends State<LoginRoute> {
+  final profileController = Get.put(ProfileController());
   final TextEditingController _unameController = TextEditingController();
   final TextEditingController _pwdController = TextEditingController();
   bool pwdShow = false;
@@ -122,8 +122,9 @@ class _LoginRouteState extends State<LoginRoute> {
       try {
         user = await Git(context)
             .login(_unameController.text, _pwdController.text);
-        // 因为登录页返回后，首页会build，所以我们传false，更新user后不触发更新
-        Provider.of<UserViewModel>(context, listen: false).user = user;
+
+        // 用户名和密码可能已经改变，更新本地存储的用户名和密码
+        profileController.updateUser(user);
       } on DioError catch (e) {
         // 登录失败则提示
         if (e.response?.statusCode == 401) {
@@ -138,7 +139,7 @@ class _LoginRouteState extends State<LoginRoute> {
 
       // 登录成功则返回
       if (user != null) {
-        Navigator.of(context).pop();
+        Get.back();
       }
     }
   }

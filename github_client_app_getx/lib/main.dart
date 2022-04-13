@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:get/get.dart';
 import 'package:github_client_app/common/global.dart';
-import 'package:github_client_app/states/view_model_index.dart';
-import 'package:provider/provider.dart';
+import 'package:github_client_app/states/profile_controller.dart';
 
 import 'generated/l10n.dart';
 import 'routes/home_page.dart';
@@ -13,24 +13,21 @@ import 'routes/theme_change_page.dart';
 
 void main() async {
   await Global.init();
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  MyApp({Key? key}) : super(key: key);
+
+  final profileController = Get.put(ProfileController());
+  final profileState = Get.find<ProfileController>().state;
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider.value(value: ThemeViewModel()),
-        ChangeNotifierProvider.value(value: UserViewModel()),
-        ChangeNotifierProvider.value(value: LocaleViewModel()),
-      ],
-      child: Consumer2<ThemeViewModel, LocaleViewModel>(
-          builder: (context, themeVM, localeVM, child) {
-        return MaterialApp(
-          theme: ThemeData(primarySwatch: themeVM.theme),
+    return GetBuilder<ProfileController>(
+      builder: (profileCtrl) {
+        return GetMaterialApp(
+          theme: ThemeData(primarySwatch: profileState.theme),
           onGenerateTitle: (context) => S.of(context).title,
           // 我们只支持美国英语和中文简体
           supportedLocales: S.delegate.supportedLocales,
@@ -40,18 +37,18 @@ class MyApp extends StatelessWidget {
             GlobalWidgetsLocalizations.delegate, // 指定默认的文本排列方向, 由左到右或由右到左
             S.delegate,
           ],
-          locale: localeVM.getLocale(),
+          locale: profileState.locale, // 设置默认语言
           initialRoute: '/',
           // 注册路由表
-          routes: <String, WidgetBuilder>{
-            "/": (_) => const HomePage(),
-            "login": (_) => const LoginRoute(),
-            "themes": (_) => const ThemeChangeRoute(),
-            "language": (_) => const LanguageRoute(),
-          },
+          getPages: [
+            GetPage(name: '/', page: () => const HomePage()),
+            GetPage(name: '/login', page: () => const LoginRoute()),
+            GetPage(name: '/themes', page: () => ThemeChangeRoute()),
+            GetPage(name: '/language', page: () => LanguageRoute()),
+          ],
           builder: EasyLoading.init(),
         );
-      }),
+      },
     );
   }
 }

@@ -3,15 +3,16 @@
 /// Date         : 2022-03-31 18:57:38
 /// Description  :
 ///
-
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:github_client_app/common/global.dart';
 import 'package:github_client_app/generated/l10n.dart';
-import 'package:github_client_app/states/view_model_index.dart';
-import 'package:provider/provider.dart';
+import 'package:github_client_app/states/profile_controller.dart';
 
 class ThemeChangeRoute extends StatelessWidget {
-  const ThemeChangeRoute({Key? key}) : super(key: key);
+  ThemeChangeRoute({Key? key}) : super(key: key);
+
+  final profileController = Get.put(ProfileController());
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +31,7 @@ class ThemeChangeRoute extends StatelessWidget {
             ),
             onTap: () {
               // 主题更新后，MaterialApp会重新build
-              Provider.of<ThemeViewModel>(context, listen: false).theme = e;
+              profileController.themeChange(e);
             },
           );
         }).toList(),

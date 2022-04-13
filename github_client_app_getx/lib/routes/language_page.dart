@@ -4,30 +4,38 @@
 /// Description  :
 ///
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:github_client_app/generated/l10n.dart';
-import 'package:github_client_app/states/view_model_index.dart';
-import 'package:provider/provider.dart';
+import 'package:github_client_app/states/profile_controller.dart';
 
 class LanguageRoute extends StatelessWidget {
-  const LanguageRoute({Key? key}) : super(key: key);
+  LanguageRoute({Key? key}) : super(key: key);
+
+  final profileController = Get.put(ProfileController());
+  final profileState = Get.find<ProfileController>().state;
 
   @override
   Widget build(BuildContext context) {
     var color = Theme.of(context).primaryColor;
-    var localeVM = Provider.of<LocaleViewModel>(context);
     var sl = S.of(context);
     Widget _wLanguageItem(String lan, value) {
-      return ListTile(
-        title: Text(
-          lan,
-          // 对APP当前语言进行高亮显示
-          style: TextStyle(color: localeVM.locale == value ? color : null),
-        ),
-        trailing:
-            localeVM.locale == value ? Icon(Icons.done, color: color) : null,
-        onTap: () {
-          // 此行代码会通知MaterialApp重新build
-          localeVM.locale = value;
+      return GetBuilder<ProfileController>(
+        builder: (profileCtrl) {
+          return ListTile(
+            title: Text(
+              lan,
+              // 对APP当前语言进行高亮显示
+              style: TextStyle(
+                  color: profileState.profile.locale == value ? color : null),
+            ),
+            trailing: profileState.profile.locale == value
+                ? Icon(Icons.done, color: color)
+                : null,
+            onTap: () {
+              // 此行代码会通知MaterialApp重新build
+              profileCtrl.localeChange(value);
+            },
+          );
         },
       );
     }

@@ -24,5 +24,6 @@ class SharedDataWidget extends InheritedWidget {
   @override
   bool updateShouldNotify(covariant SharedDataWidget oldWidget) {
     return oldWidget.data != data;
+    // return false;
   }
 }
