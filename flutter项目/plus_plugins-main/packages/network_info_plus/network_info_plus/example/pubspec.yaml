@@ -1,0 +1,34 @@
+name: network_info_plus_example
+description: Demonstrates how to use the network_info_plus plugin.
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  network_info_plus:
+    path: ../
+
+dependency_overrides:
+  network_info_plus_linux:
+    path: ../../network_info_plus_linux
+  network_info_plus_macos:
+    path: ../../network_info_plus_macos
+  network_info_plus_platform_interface:
+    path: ../../network_info_plus_platform_interface
+  network_info_plus_web:
+    path: ../../network_info_plus_web
+  network_info_plus_windows:
+    path: ../../network_info_plus_windows
+
+dev_dependencies:
+  flutter_driver:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+  test: ^1.16.4
+  flutter_lints: ^1.0.4
+
+flutter:
+  uses-material-design: true
