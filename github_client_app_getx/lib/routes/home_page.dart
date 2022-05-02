@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage> {
       // 用户未登录，显示登录按钮
       return Center(
         child: ElevatedButton(
-          child: Text(S.of(context).login),
+          child: Text(S.current.login),
           onPressed: () => Get.toNamed('login'),
         ),
       );

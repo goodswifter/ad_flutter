@@ -8,6 +8,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:github_client_app/common/global.dart';
+import 'package:github_client_app/generated/l10n.dart';
 import 'package:github_client_app/models/index.dart';
 
 import 'profile_state.dart';
@@ -43,6 +44,7 @@ class ProfileController extends GetxController {
   void localeChange(String? locale) {
     state.profile.locale = locale;
     state.locale = getLocale();
+    S.load(state.locale ?? window.locale);
     Get.updateLocale(state.locale ?? window.locale);
 
     // 保存Profile变更

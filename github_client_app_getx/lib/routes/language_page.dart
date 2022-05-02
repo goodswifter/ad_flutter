@@ -7,9 +7,13 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:github_client_app/generated/l10n.dart';
 import 'package:github_client_app/states/profile_controller.dart';
+import 'package:intl/intl.dart';
 
 class LanguageRoute extends StatelessWidget {
   LanguageRoute({Key? key}) : super(key: key);
+
+  final List<String> names = ['中文简体', 'English', S.current.auto];
+  final List lans = ['zh_CN', 'en', null];
 
   final profileController = Get.put(ProfileController());
   final profileState = Get.find<ProfileController>().state;
@@ -17,7 +21,9 @@ class LanguageRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var color = Theme.of(context).primaryColor;
-    var sl = S.of(context);
+    // var sl = S.of(context);
+    var sl = S.current;
+    // String  a = Intl.message('auto');
     Widget _wLanguageItem(String lan, value) {
       return GetBuilder<ProfileController>(
         builder: (profileCtrl) {
@@ -40,17 +46,16 @@ class LanguageRoute extends StatelessWidget {
       );
     }
 
+    List<Widget> lists = [];
+    for (var i = 0; i < names.length; i++) {
+      lists.add(_wLanguageItem(names[i], lans[i]));
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: Text(sl.language),
       ),
-      body: ListView(
-        children: [
-          _wLanguageItem("中文简体", "zh_CN"),
-          _wLanguageItem("English", "en"),
-          _wLanguageItem(sl.auto, null),
-        ],
-      ),
+      body: ListView(children: lists),
     );
   }
 }

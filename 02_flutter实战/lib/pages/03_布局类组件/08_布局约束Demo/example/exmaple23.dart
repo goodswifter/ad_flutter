@@ -29,7 +29,7 @@ class Example23 extends Example {
     return Row(
       children: [
         Container(color: red, child: const Text('Hello!', style: big)),
-        Container(color: green, child: const Text('Goodbye!', style: big)),
+        Container(color: green, child: const Text('Goodbye!', style: middle)),
       ],
     );
   }

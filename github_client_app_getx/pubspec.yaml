@@ -13,6 +13,8 @@ dependencies:
   # 国际化依赖
   flutter_localizations:
     sdk: flutter
+  # 本地化 https://pub.flutter-io.cn/packages/intl
+  intl: ^0.17.0
   # 持久化 https://pub.flutter-io.cn/packages/shared_preferences
   shared_preferences: ^2.0.13
   # 网络请求 https://pub.flutter-io.cn/packages/dio
