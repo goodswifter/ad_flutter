@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:github_client_app/common/global.dart';
 import 'package:github_client_app/generated/l10n.dart';
+import 'package:github_client_app/models/app_theme.dart';
 import 'package:github_client_app/models/index.dart';
 
 import 'profile_state.dart';
@@ -21,9 +22,9 @@ class ProfileController extends GetxController {
   }
 
   // 主题改变后，通知其依赖项，新主题会立即生效
-  void themeChange(MaterialColor themeColor) {
-    state.theme = themeColor;
-    state.profile.theme = themeColor[500]!.value;
+  void themeChange(ThemeType themeType) {
+    state.theme = AppTheme.getThemeData(themeType);
+    state.profile.theme = themeType.index;
     // 保存Profile变更
     Global.saveProfile(state.profile);
     update();

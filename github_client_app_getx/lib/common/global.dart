@@ -6,20 +6,12 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:github_client_app/models/app_theme.dart';
 import 'package:github_client_app/models/index.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'net/git.dart';
 import 'net/net_cache.dart';
-
-/// 提供五套可选主题色
-const _themes = <MaterialColor>[
-  Colors.blue,
-  Colors.cyan,
-  Colors.teal,
-  Colors.green,
-  Colors.red,
-];
 
 class Global {
   /// 数据存储对象
@@ -32,14 +24,14 @@ class Global {
   static NetCache netCache = NetCache();
 
   /// 可选的主题列表
-  static List<MaterialColor> get themes => _themes;
+  static List get themes => themeColors;
 
   /// 是否为release版
   static bool get isRelease => const bool.fromEnvironment("dart.vm.product");
 
   /// 初始化全局信息，会在APP启动时执行
   static init() async {
-    // 用于与 Flutter 引擎进行交互
+    // 用来与 Flutter 引擎进行交互
     // 由于插件需要使用平台通道来调用本机代码，这是异步完成的，
     // 因此调用ensureInitialized()以确保您拥有WidgetsBinding.
     WidgetsFlutterBinding.ensureInitialized();

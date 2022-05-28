@@ -5,6 +5,7 @@
 ///
 import 'package:flutter/material.dart';
 import 'package:github_client_app/common/global.dart';
+import 'package:github_client_app/models/app_theme.dart';
 import 'package:github_client_app/models/index.dart';
 
 class ProfileState {
@@ -18,7 +19,7 @@ class ProfileState {
   late Locale? locale;
 
   /// 主题
-  late MaterialColor theme;
+  late ThemeData theme;
 
   /// 是否登录
   late bool isLogin;
@@ -26,7 +27,11 @@ class ProfileState {
   ProfileState() {
     user = profile.user;
     isLogin = profile.user != null;
-    theme = Global.themes.firstWhere((e) => e.value == profile.theme,
-        orElse: () => Colors.blue);
+    // 获取当前主题类型
+    ThemeType themeType = ThemeType.values.firstWhere(
+      (e) => e.index == profile.theme,
+      orElse: () => ThemeType.purple,
+    );
+    theme = AppTheme.getThemeData(themeType);
   }
 }

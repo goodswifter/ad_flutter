@@ -33,7 +33,7 @@ class NetCache extends Interceptor {
     if (refresh) {
       if (options.extra['list'] == true) {
         // 若是列表，则只要url中包含当前path的缓存全部删除（简单实现，并不精准）
-        cache.removeWhere((key, value) => key.contains(options.path));
+        caches.removeWhere((key, value) => key.contains(options.path));
       } else {
         // 如果不是列表，则只删除uri相同的缓存
         delete(options.uri.toString());
@@ -44,7 +44,7 @@ class NetCache extends Interceptor {
     if (options.extra['noCache'] != true &&
         options.method.toLowerCase() == 'get') {
       String key = options.extra['cacheKey'] ?? options.uri.toString();
-      var ob = cache[key];
+      var ob = caches[key];
       if (ob != null) {
         // 若缓存未过期，则返回缓存内容
         if ((DateTime.now().millisecondsSinceEpoch - ob.timeStamp) / 1000 <
@@ -52,7 +52,7 @@ class NetCache extends Interceptor {
           return handler.resolve(ob.response);
         } else {
           // 若已过期则删除缓存，继续向服务器请求
-          cache.remove(key);
+          caches.remove(key);
         }
       }
     }
@@ -74,16 +74,16 @@ class NetCache extends Interceptor {
     if (options.extra["noCache"] != true &&
         options.method.toLowerCase() == "get") {
       // 如果缓存数量超过最大数量限制，则先移除最早的一条记录
-      if (cache.length == Global.profile.cache!.maxCount) {
-        cache.remove(cache[cache.keys.first]);
+      if (caches.length == Global.profile.cache!.maxCount) {
+        caches.remove(caches[caches.keys.first]);
       }
       String key = options.extra["cacheKey"] ?? options.uri.toString();
-      cache[key] = CacheObject(response);
+      caches[key] = CacheObject(response);
     }
   }
 
   /// 通过 [key] 删除对应的缓存
   void delete(String key) {
-    cache.remove(key);
+    caches.remove(key);
   }
 }

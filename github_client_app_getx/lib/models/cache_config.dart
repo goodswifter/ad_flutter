@@ -13,14 +13,14 @@
 class CacheConfig {
   CacheConfig({
     this.enable = true,
-    this.maxAge = 1000,
+    this.maxAge = 30 * 60,
     this.maxCount = 100,
   });
 
   /// 是否启用缓存
   bool enable;
 
-  /// 缓存的最长时间，单位（秒）, 默认1000
+  /// 缓存的最长时间，单位（秒）, 默认30分钟
   int maxAge;
 
   /// 最大缓存数, 默认100

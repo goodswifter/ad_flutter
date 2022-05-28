@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
     return GetBuilder<ProfileController>(
       builder: (profileCtrl) {
         return GetMaterialApp(
-          theme: ThemeData(primarySwatch: profileState.theme),
+          theme: profileState.theme,
           onGenerateTitle: (context) => S.of(context).title,
           // 我们只支持美国英语和中文简体
           supportedLocales: S.delegate.supportedLocales,

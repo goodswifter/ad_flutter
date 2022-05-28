@@ -55,7 +55,7 @@ class MyPainter extends CustomPainter {
     drawPieces(canvas, rect);
   }
 
-  /// 画旗子
+  /// 画棋子
   void drawPieces(Canvas canvas, Rect rect) {
     // 网格宽高
     double eWidth = rect.width / 15;

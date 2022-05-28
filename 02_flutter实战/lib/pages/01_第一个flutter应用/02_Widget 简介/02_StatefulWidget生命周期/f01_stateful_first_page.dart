@@ -55,7 +55,7 @@ class _StatefulFirstPageState extends State<StatefulFirstPage> {
 
   /// 执行didChangeDependencies方法的两种情况
   /// 1. 调用initState会调用
-  /// 2. 从其他对象中依赖一些数据发生改变时，比如前面我们提到的InheritedWidget(这个后面会讲到) 
+  /// 2. 从其他对象中依赖一些数据发生改变时，比如前面我们提到的 InheritedWidget(这个后面会讲到) 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -87,6 +87,7 @@ class _StatefulFirstPageState extends State<StatefulFirstPage> {
   @override
   Widget build(BuildContext context) {
     print('StatefulFirstPageState - build');
+    print(context.widget);
     return Scaffold(
       appBar: AppBar(title: const Text('StatefulFirstPage')),
       body: Center(

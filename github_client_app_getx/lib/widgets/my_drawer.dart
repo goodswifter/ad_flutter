@@ -45,6 +45,10 @@ class MyDrawer extends StatelessWidget {
               title: Text(sl.language),
               onTap: () => Get.offAndToNamed('/language'),
             ),
+            Container(
+              color: Theme.of(context).primaryColorLight,
+              height: 50,
+            ),
             if (profileState.isLogin)
               ListTile(
                 leading: const Icon(Icons.power_settings_new),
